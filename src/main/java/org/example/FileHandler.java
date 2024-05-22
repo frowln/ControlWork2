@@ -33,7 +33,7 @@ public class FileHandler implements Runnable {
             logger.log(String.format("Прочтен файл %s, количество байтов: %d, количество символов: %d, сумма: %d, part number: %d",
                     inputFile.getName(), size, actualCharCount, controlSum, partNumber));
 
-            if (size == controlSum && actualByteCount == size) {
+            if (actualCharCount == controlSum) {
                 synchronized (fileParts) {
                     fileParts.put(partNumber, content);
                 }
