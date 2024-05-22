@@ -1,7 +1,7 @@
-Read file v10_task_b909bd54-e8d5-41af-9d0b-2703bc0c17c1, expected byte count: 1591, actual byte count: 1591, character count: 882, control sum: 882, part number: 0
-Read file v10_task_63e48fca-3e6e-46cb-9812-c79a64b84ee7, expected byte count: 10243, actual byte count: 10243, character count: 5595, control sum: 5595, part number: 3
-Read file v10_task_84550cee-de03-4950-ac91-19a699dc9cc9, expected byte count: 8833, actual byte count: 8833, character count: 4838, control sum: 4838, part number: 5
-Read file v10_task_8ba5e1f8-37cf-4812-b0f6-a6df38f37702, expected byte count: 6862, actual byte count: 6862, character count: 3735, control sum: 3735, part number: 4
-Read file v10_task_56782209-5f62-42e5-adaf-21f04db024d4, expected byte count: 9063, actual byte count: 9063, character count: 4950, control sum: 4950, part number: 2
-Read file v10_task_0716bd10-c3e6-4e39-804b-40d995b10283, expected byte count: 1948, actual byte count: 1948, character count: 1077, control sum: 1077, part number: 1
-Read file v10_task_1c459d44-4f65-4567-94a5-6207a2ca3216, expected byte count: 4804, actual byte count: 4804, character count: 2621, control sum: 2621, part number: 6
+Прочтен файл v10_task_84550cee-de03-4950-ac91-19a699dc9cc9, ожидаемое количество байтов: 8833, реальное количество байтов: 8833, количество символов: 4838, сумма: 4838, part number: 5
+Прочтен файл v10_task_b909bd54-e8d5-41af-9d0b-2703bc0c17c1, ожидаемое количество байтов: 1591, реальное количество байтов: 1591, количество символов: 882, сумма: 882, part number: 0
+Прочтен файл v10_task_8ba5e1f8-37cf-4812-b0f6-a6df38f37702, ожидаемое количество байтов: 6862, реальное количество байтов: 6862, количество символов: 3735, сумма: 3735, part number: 4
+Прочтен файл v10_task_1c459d44-4f65-4567-94a5-6207a2ca3216, ожидаемое количество байтов: 4804, реальное количество байтов: 4804, количество символов: 2621, сумма: 2621, part number: 6
+Прочтен файл v10_task_63e48fca-3e6e-46cb-9812-c79a64b84ee7, ожидаемое количество байтов: 10243, реальное количество байтов: 10243, количество символов: 5595, сумма: 5595, part number: 3
+Прочтен файл v10_task_56782209-5f62-42e5-adaf-21f04db024d4, ожидаемое количество байтов: 9063, реальное количество байтов: 9063, количество символов: 4950, сумма: 4950, part number: 2
+Прочтен файл v10_task_0716bd10-c3e6-4e39-804b-40d995b10283, ожидаемое количество байтов: 1948, реальное количество байтов: 1948, количество символов: 1077, сумма: 1077, part number: 1

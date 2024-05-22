@@ -18,10 +18,9 @@ public class FileHandler implements Runnable {
     @Override
     public void run() {
         try (DataInputStream dataStream = new DataInputStream(new FileInputStream(inputFile))) {
-            int expectedSize = dataStream.readInt();
-            int remainingBytes = (int) (inputFile.length() - Integer.BYTES * 3);
+            int size = dataStream.readInt();
 
-            byte[] dataBytes = new byte[remainingBytes];
+            byte[] dataBytes = new byte[size];
             dataStream.read(dataBytes);
 
             String content = new String(dataBytes, StandardCharsets.UTF_8);
@@ -31,15 +30,15 @@ public class FileHandler implements Runnable {
             int actualCharCount = content.length();
             int actualByteCount = content.getBytes(StandardCharsets.UTF_8).length;
 
-            logger.log(String.format("Read file %s, expected byte count: %d, actual byte count: %d, character count: %d, control sum: %d, part number: %d",
-                    inputFile.getName(), expectedSize, actualByteCount, actualCharCount, controlSum, partNumber));
+            logger.log(String.format("Прочтен файл %s, количество байтов: %d, количество символов: %d, сумма: %d, part number: %d",
+                    inputFile.getName(), size, actualCharCount, controlSum, partNumber));
 
-            if (actualCharCount == controlSum && actualByteCount == expectedSize) {
+            if (size == controlSum && actualByteCount == size) {
                 synchronized (fileParts) {
                     fileParts.put(partNumber, content);
                 }
             } else {
-                logger.log(String.format("Error in file %s: control sum or byte count do not match actual data", inputFile.getName()));
+                logger.log(String.format("Ошибка в файле %s: количество байт не соответствуют фактическим данным", inputFile.getName()));
             }
         } catch (IOException e) {
             e.printStackTrace();

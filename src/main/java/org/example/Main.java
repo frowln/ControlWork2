@@ -4,20 +4,15 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            String version = "10";
-            String directoryPath = "v" + version;
-            Logger logger = new Logger("v" + version + ".log");
+            String directoryPath = "v10";
+            Logger logger = new Logger("v10.log");
 
-            Map<Integer, String> fileParts = new ConcurrentHashMap<>();
+            Map<Integer, String> fileParts = new HashMap<>();
 
             File directory = new File(directoryPath);
             File[] fileList = directory.listFiles();
@@ -39,7 +34,7 @@ public class Main {
             List<Integer> partNumbers = new ArrayList<>(fileParts.keySet());
             Collections.sort(partNumbers);
 
-            try (PrintWriter outputWriter = new PrintWriter(new FileWriter("v" + version + ".txt"))) {
+            try (PrintWriter outputWriter = new PrintWriter(new FileWriter("v10.txt"))) {
                 for (int partNumber : partNumbers) {
                     outputWriter.print(fileParts.get(partNumber));
                 }
